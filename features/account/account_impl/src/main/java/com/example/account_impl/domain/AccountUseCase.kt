@@ -1,4 +1,4 @@
-package com.example.account_impl.presentation.domain
+package com.example.account_impl.domain
 
 import com.example.shared_preferences.SharedPreferences
 import kotlinx.coroutines.delay

@@ -1,9 +1,9 @@
-package com.example.account_impl.presentation.di
+package com.example.account_impl.di
 
 
 import com.example.account_impl.AccountFeatureImpl
 import com.example.account_impl.presentation.AccountViewModel
-import com.example.account_impl.presentation.domain.AccountUseCase
+import com.example.account_impl.domain.AccountUseCase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module

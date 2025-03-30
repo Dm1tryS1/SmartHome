@@ -1,10 +1,10 @@
-package com.example.auth_impl.presentation.di
+package com.example.auth_impl.di
 
 
 import com.example.auth_api.AuthFeature
 import com.example.auth_impl.AuthFeatureImpl
 import com.example.auth_impl.presentation.AuthViewModel
-import com.example.auth_impl.presentation.domain.AuthUseCase
+import com.example.auth_impl.domain.AuthUseCase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module

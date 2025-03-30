@@ -2,7 +2,7 @@ package com.example.auth_impl.presentation
 
 import androidx.lifecycle.viewModelScope
 import com.example.core.presentation.BaseViewModel
-import com.example.auth_impl.presentation.domain.AuthUseCase
+import com.example.auth_impl.domain.AuthUseCase
 import com.github.terrakok.cicerone.Router
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

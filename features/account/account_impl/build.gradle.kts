@@ -16,6 +16,8 @@ dependencies {
     implementation(project(Modules.Feature.settings.api))
     implementation(project(Modules.Common.sharedPreferences))
 
+    implementation(Deps.recycler)
+
     implementation(Deps.Coroutines.core)
     implementation(Deps.Koin.koinAndroid)
     implementation(Deps.Navigation.cicerone)

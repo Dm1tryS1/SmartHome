@@ -1,7 +1,7 @@
 package com.example.smarthome.di
 
-import com.example.account_impl.presentation.di.AccountModule
-import com.example.auth_impl.presentation.di.AuthModule
+import com.example.account_impl.di.AccountModule
+import com.example.auth_impl.di.AuthModule
 import com.example.chart_impl.di.ChartsModule
 import com.example.connection_impl.di.ConnectionModule
 import com.example.core.navigation.NavigationModule
