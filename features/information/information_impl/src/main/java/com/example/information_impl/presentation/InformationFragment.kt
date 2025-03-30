@@ -17,7 +17,6 @@ import com.example.information_impl.databinding.FragmentInformationBinding
 import com.example.information_impl.presentation.dialog.Conditioner
 import com.example.information_impl.presentation.dialog.Humidifier
 import com.example.information_impl.presentation.dialog.Sensor
-import com.example.information_impl.presentation.dialog.Settings
 import com.example.information_impl.presentation.recyclerView.adapter.InformationAdapter
 import com.example.information_impl.presentation.recyclerView.model.InfoViewItem
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -126,15 +125,6 @@ class InformationFragment : BaseFragment<InformationState, InformationEvent>(R.l
                     fragment = this@InformationFragment,
                     action = event.command,
                     on = event.on
-                ).show()
-            }
-            is InformationEvent.OpenSettingsMenuEvent -> {
-                Settings.create(
-                    fragment = this@InformationFragment,
-                    action = event.setTimer,
-                    progress = event.value,
-                    save = vm::saveUserSettings,
-                    openSystemSettings = vm::onMoreSettings
                 ).show()
             }
             is InformationEvent.ShowNotification -> {

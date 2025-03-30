@@ -53,6 +53,11 @@ class SettingsViewModel(
         }
     }
 
+    override fun onBackPressed(): Boolean {
+        router.backTo(null)
+        return !super.onBackPressed()
+    }
+
     override fun createInitialState(): SettingsState {
         return SettingsState(false)
     }

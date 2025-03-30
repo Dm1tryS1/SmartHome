@@ -16,9 +16,6 @@ sealed class InformationEvent {
         val command: (String) -> Unit
     ) : InformationEvent()
 
-    data class OpenSettingsMenuEvent(val value: Int, val setTimer: (value: Int) -> Unit) :
-        InformationEvent()
-
     data class OpenSensorMenuEvent(
         val deviceInfo: InfoViewItem.SensorsInfoViewItem,
         val command: (id: Int, sensorType: SensorType) -> Unit

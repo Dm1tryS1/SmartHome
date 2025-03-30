@@ -87,8 +87,7 @@ class SystemFragment : BaseFragment<SystemState, Unit>(R.layout.fragment_system)
                     0 -> R.id.btn_max_temp
                     1 -> R.id.btn_min_temp
                     2 -> R.id.btn_max_hum
-                    3 -> R.id.btn_min_hum
-                    else -> R.id.btn_timer
+                    else -> R.id.btn_min_hum
                 }
             )
             loader.isVisible = state.isLoading

@@ -115,10 +115,4 @@ class ChooseDeviceViewModel(
     enum class Type {
         TypeCond, TypeHum
     }
-
-    override fun onBackPressed(): Boolean {
-        router.backTo(null)
-        return !super.onBackPressed()
-    }
-
 }

@@ -92,20 +92,11 @@
                     android:buttonTint="@color/blue"
                     android:text="@string/system_choose_min_humidity"
                     android:textSize="12sp" />
-
-                <RadioButton
-                    android:id="@+id/btn_timer"
-                    style="@style/text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/blue"
-                    android:text="@string/system_choose_timer"
-                    android:textSize="12sp" />
             </RadioGroup>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/save"
-                style="@style/text"
+                style="@style/textButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"

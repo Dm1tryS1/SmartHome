@@ -37,10 +37,6 @@ object Conditioner {
                 action.invoke(ConditionerCommands.AddTemperature.command)
             }
 
-            close.setOnClickListener {
-                dialog.dismiss()
-            }
-
             return dialog.build()
         }
     }

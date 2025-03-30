@@ -38,10 +38,6 @@ object Sensor {
                 dialog.dismiss()
             }
 
-            close.setOnClickListener {
-                dialog.dismiss()
-            }
-
             return dialog.build()
         }
     }

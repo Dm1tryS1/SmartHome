@@ -57,7 +57,7 @@ class ChartsFragment : BaseFragment<ChartsState, ChartsEvent>(R.layout.fragment_
                 setDrawCircleHole(false)
                 lineWidth = 1.0f
                 setCircleColor(getColor(requireContext(), state.pointColor))
-                highLightColor = Color.rgb(244, 117, 117)
+                highLightColor = this@ChartsFragment.resources.getColor(R.color.gray1)
                 color = getColor(requireContext(), state.graphColor)
                 fillAlpha = 20
                 setDrawHorizontalHighlightIndicator(false)
@@ -88,6 +88,7 @@ class ChartsFragment : BaseFragment<ChartsState, ChartsEvent>(R.layout.fragment_
             with(chart) {
                 axisLeft.valueFormatter = valueFormatterValue
                 setTouchEnabled(false)
+                legend.textColor = this.resources.getColor(R.color.gray1)
                 legend.isEnabled = false
                 description.isEnabled = false
                 setTouchEnabled(false)
@@ -119,7 +120,7 @@ class ChartsFragment : BaseFragment<ChartsState, ChartsEvent>(R.layout.fragment_
                 val date = Calendar.getInstance()
                 DatePickerDialog(
                     requireContext(),
-                    AlertDialog.THEME_HOLO_DARK,
+                    AlertDialog.THEME_HOLO_LIGHT,
                     { _, year, month, day ->
                         vm.buildChart("${day.toTime()}-${month.inc().toTime()}-$year")
                     },

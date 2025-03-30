@@ -17,12 +17,6 @@ class RemoteControlViewModel(
         return RemoteControlState(Type.TypeCond)
     }
 
-
-    override fun onBackPressed(): Boolean {
-        router.backTo(null)
-        return !super.onBackPressed()
-    }
-
     fun changeList(type: Type) {
         when (type) {
             Type.TypeCond -> updateState { RemoteControlState(Type.TypeCond) }

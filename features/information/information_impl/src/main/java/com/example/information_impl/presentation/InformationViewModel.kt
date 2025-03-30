@@ -156,43 +156,12 @@ class InformationViewModel(
         }
     }
 
-    private fun setTimer(value: Int) {
-        viewModelScope.launch(Dispatchers.IO) {
-            informationUseCase.setTimer(value)
-        }
-    }
-
     fun onChartOpen(type: SensorType, id: Int) {
         if (type == SensorType.TemperatureSensor || type == SensorType.HumiditySensor || type == SensorType.PressureSensor)
             router.navigateTo(features.chartsFeature.createScreen(ChartsFeature.ChartsParams(type, id)))
     }
 
     fun onSettingsClicked() {
-        viewModelScope.launch {
-            val timer = informationUseCase.getUserSettings()
-            if (timer >= 0) {
-                sendEvent(
-                    InformationEvent.OpenSettingsMenuEvent(
-                        timer,
-                        this@InformationViewModel::setTimer
-                    )
-                )
-            } else {
-                sendEvent(
-                    InformationEvent.OpenSettingsMenuEvent(
-                        0,
-                        this@InformationViewModel::setTimer
-                    )
-                )
-            }
-        }
-    }
-
-    fun saveUserSettings(value: Int) {
-        informationUseCase.saveUserSettings(value)
-    }
-
-    fun onMoreSettings() {
         router.navigateTo(features.systemFeature.createScreen(NoParams))
     }
 }

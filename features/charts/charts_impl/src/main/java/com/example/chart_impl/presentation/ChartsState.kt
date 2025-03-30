@@ -9,5 +9,5 @@ data class ChartsState(
     val listDates: ArrayList<String>,
     val deviceTypes: SensorType?,
     val graphColor: Int = R.color.blue,
-    val pointColor: Int =  R.color.white
+    val pointColor: Int =  R.color.gray1
 )
