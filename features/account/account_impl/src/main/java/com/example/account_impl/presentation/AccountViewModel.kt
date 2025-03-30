@@ -1,11 +1,11 @@
 package com.example.account_impl.presentation
 
+import ConnectionFeature
 import com.example.account_impl.domain.AccountUseCase
 import com.example.account_impl.presentation.recyclerView.model.GroupViewItem
 import com.example.auth_api.AuthFeature
 import com.example.core.navigation.NoParams
 import com.example.core.presentation.BaseViewModel
-import com.example.settings_api.SettingsFeature
 import com.github.terrakok.cicerone.Router
 
 class AccountViewModel(
@@ -16,7 +16,7 @@ class AccountViewModel(
 
     class Features(
         val authFeature: AuthFeature,
-        val settingsFeature: SettingsFeature,
+        val connectionFeature: ConnectionFeature,
     )
 
     fun auth() {
@@ -52,7 +52,7 @@ class AccountViewModel(
     }
 
     fun connectSystem() {
-        router.navigateTo(features.settingsFeature.createScreen(NoParams))
+        router.navigateTo(features.connectionFeature.createFeature(NoParams))
     }
 
     fun onGroupClicked(group: GroupViewItem.Group) {

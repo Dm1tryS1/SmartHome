@@ -14,7 +14,8 @@
         android:src="@drawable/ic_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue" />
 
     <TextView
         android:id="@+id/title"
@@ -41,7 +42,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next"
-        style="@style/text"
+        style="@style/textButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
@@ -51,7 +52,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/by_ip"
-        style="@style/text"
+        style="@style/textButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
@@ -64,7 +65,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/remote_control"
-        style="@style/text"
+        style="@style/textButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"

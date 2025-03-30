@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/dark1">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/icon"
@@ -13,7 +13,8 @@
         android:src="@drawable/ic_wifi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue" />
 
     <TextView
         android:id="@+id/title"
@@ -38,7 +39,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/connect"
-        style="@style/text"
+        style="@style/textButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"

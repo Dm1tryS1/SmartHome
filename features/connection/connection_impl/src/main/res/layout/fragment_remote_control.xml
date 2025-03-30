@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark1">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/icon"
@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
+            android:buttonTint="@color/blue"
             android:text="@string/connect_device_cond"
             android:textSize="12sp" />
 
@@ -54,6 +55,7 @@
             style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/blue"
             android:text="@string/connect_device_hum"
             android:textSize="12sp" />
     </RadioGroup>
@@ -72,7 +74,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cond_on"
-            style="@style/text"
+            style="@style/textButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="16dp"
@@ -81,7 +83,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cond_off"
-            style="@style/text"
+            style="@style/textButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="16dp"
@@ -90,7 +92,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cond_addTemp"
-            style="@style/text"
+            style="@style/textButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="16dp"
@@ -99,7 +101,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cond_reduceTemp"
-            style="@style/text"
+            style="@style/textButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="16dp"
@@ -121,7 +123,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/hum_on"
-            style="@style/text"
+            style="@style/textButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="16dp"
@@ -130,7 +132,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/hum_off"
-            style="@style/text"
+            style="@style/textButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_margin="16dp"
@@ -143,10 +145,11 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:indeterminateTint="@color/blue"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radio_group" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
