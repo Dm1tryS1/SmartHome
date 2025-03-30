@@ -7,7 +7,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/connect"
-        style="@style/text"
+        style="@style/textButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="32dp"

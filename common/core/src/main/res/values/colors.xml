@@ -12,7 +12,7 @@
     <color name="button_standart">#888686</color>
     <color name="button_standart_stroke">#C5C4C4</color>
     <color name="button_standart_text">#1B1A1A</color>
-    <color name="background">#131821</color>
+    <color name="background">#FFFFFFFF</color>
     <color name="background_0">#1A202C</color>
     <color name="dark1">#232b38</color>
     <color name="dark2">#2a313c</color>

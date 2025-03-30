@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_button_confirm">Сохранить изменения</string>
+    <string name="settings_label">Автоматическое обновление (мин):</string>
+    <string name="settings_more">Дополнительные настройки</string>
+    <string name="settings_button_connect">Подключить</string>
+    <string name="settings_button_disconnect">Отключиться</string>
+    <string name="settings_connect_title">Для того, чтобы начать пользоваться приложением, подключите устройство к локальной сети</string>
+    <string name="settings_connected">Соединено</string>
+    <string name="settings_fail">Ошибка подключения</string>
+    <string name="temperature_button_back">Закрыть</string>
+    <string name="settings_button_update">Обновить</string>
+    <string name="error_connection">Подключитесь к системе</string>
+    <string name="connect_device_error">Убедитесь, что Вы подключены к сети Wi-Fi</string>
+    <string name="connect_device_network_password">Пароль от сети:</string>
+</resources>

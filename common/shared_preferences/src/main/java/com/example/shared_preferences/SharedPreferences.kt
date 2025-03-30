@@ -40,5 +40,6 @@ class SharedPreferences(context: Context) {
         const val userMinHumidity = "UserMinHumidity "
         const val userDisplayedValue = "UserDisplayedValue"
         const val systemIp = "SystemIp"
+        const val authToken = "AuthToken"
     }
 }

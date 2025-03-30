@@ -22,6 +22,7 @@ object Modules {
         val charts = FeatureTemplate("charts")
         val settings = FeatureTemplate("settings")
         val connection = FeatureTemplate("connection")
+        val auth = FeatureTemplate("auth")
     }
 
 }
