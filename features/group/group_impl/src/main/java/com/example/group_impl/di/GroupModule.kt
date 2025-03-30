@@ -1,14 +1,13 @@
-package com.example.account_impl.di
+package com.example.group_impl.di
 
-
-import com.example.account_impl.AccountFeatureImpl
-import com.example.account_impl.presentation.AccountViewModel
-import com.example.account_impl.domain.AccountUseCase
+import com.example.group_api.GroupFeature
+import com.example.group_impl.GroupFeatureImpl
+import com.example.group_impl.presentation.GroupViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-object AccountModule {
+object GroupModule {
     operator fun invoke() = listOf(
         createFeatureModule(),
         createDataModule(),
@@ -17,20 +16,20 @@ object AccountModule {
     )
 
     private fun createFeatureModule() = module {
-        factory { AccountFeatureImpl() } bind AccountFeatureImpl::class
+        factory { GroupFeatureImpl() } bind GroupFeature::class
     }
 
 
     private fun createPresentationModule() = module {
-        viewModel { AccountViewModel(get(), get(), get()) }
+        viewModel { GroupViewModel(get(), get()) }
 
-        factory { AccountViewModel.Features(get(), get(), get()) }
+        factory { GroupViewModel.Features(get()) }
     }
 
     private fun createDomainModule() = module {
-        factory { AccountUseCase(get()) }
     }
 
     private fun createDataModule() = module {
     }
+
 }

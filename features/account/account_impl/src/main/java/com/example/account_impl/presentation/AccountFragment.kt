@@ -3,13 +3,13 @@ package com.example.account_impl.presentation
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isGone
+import com.example.account_impl.R
+import com.example.account_impl.databinding.FragmentAccountBinding
 import com.example.account_impl.presentation.dialog.Settings
 import com.example.account_impl.presentation.recyclerView.adapter.GroupsAdapter
 import com.example.core.fragmentViewBinding
 import com.example.core.presentation.BaseFragment
 import com.example.core.utils.supportBottomSheetScroll
-import com.example.settings_impl.R
-import com.example.settings_impl.databinding.FragmentAccountBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AccountFragment : BaseFragment<AccountState, AccountEvent>(R.layout.fragment_account) {

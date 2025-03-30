@@ -1,12 +1,16 @@
 package com.example.account_impl.presentation
 
 import ConnectionFeature
+import androidx.lifecycle.viewModelScope
 import com.example.account_impl.domain.AccountUseCase
 import com.example.account_impl.presentation.recyclerView.model.GroupViewItem
 import com.example.auth_api.AuthFeature
 import com.example.core.navigation.NoParams
 import com.example.core.presentation.BaseViewModel
+import com.example.group_api.GroupFeature
 import com.github.terrakok.cicerone.Router
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class AccountViewModel(
     private val accountUseCase: AccountUseCase,
@@ -17,6 +21,7 @@ class AccountViewModel(
     class Features(
         val authFeature: AuthFeature,
         val connectionFeature: ConnectionFeature,
+        val groupFeature: GroupFeature,
     )
 
     fun auth() {
@@ -24,16 +29,20 @@ class AccountViewModel(
     }
 
     fun addGroup() {
-        updateState { state ->
-            state.copy(
-                groups = state.groups.map {
-                    it.copy(status = false)
-                } + GroupViewItem.Group(
-                    id = state.groups.size,
-                    name = "Кабинет ${state.groups.size + 1}",
-                    status = true
+        viewModelScope.launch {
+            router.navigateTo(features.groupFeature.createScreen(NoParams))
+            delay(1000)
+            updateState { state ->
+                state.copy(
+                    groups = state.groups.map {
+                        it.copy(status = false)
+                    } + GroupViewItem.Group(
+                        id = state.groups.size,
+                        name = "Кабинет ${state.groups.size + 1}",
+                        status = true
+                    )
                 )
-            )
+            }
         }
     }
 

@@ -68,6 +68,8 @@ dependencies {
     implementation(project(Modules.Feature.auth.impl))
     implementation(project(Modules.Feature.account.api))
     implementation(project(Modules.Feature.account.impl))
+    implementation(project(Modules.Feature.group.api))
+    implementation(project(Modules.Feature.group.impl))
 
     implementation(Deps.Navigation.navigation)
     implementation(Deps.Navigation.cicerone)

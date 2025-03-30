@@ -5,6 +5,7 @@ import com.example.auth_impl.di.AuthModule
 import com.example.chart_impl.di.ChartsModule
 import com.example.connection_impl.di.ConnectionModule
 import com.example.core.navigation.NavigationModule
+import com.example.group_impl.di.GroupModule
 import com.example.home_impl.di.HomeModule
 import com.example.information_impl.di.InformationModule
 import com.example.network.di.NetworkModule
@@ -33,5 +34,6 @@ object AppModule {
         StorageModule(),
         AccountModule(),
         AuthModule(),
+        GroupModule()
     ).flatten()
 }

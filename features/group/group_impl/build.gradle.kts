@@ -11,13 +11,9 @@ android {
 dependencies {
     implementation(project(Modules.Common.core))
     implementation(project(Modules.Common.data))
-    implementation(project(Modules.Feature.account.api))
-    implementation(project(Modules.Feature.auth.api))
-    implementation(project(Modules.Feature.connection.api))
     implementation(project(Modules.Feature.group.api))
+    implementation(project(Modules.Feature.settings.api))
     implementation(project(Modules.Common.sharedPreferences))
-
-    implementation(Deps.recycler)
 
     implementation(Deps.Coroutines.core)
     implementation(Deps.Koin.koinAndroid)

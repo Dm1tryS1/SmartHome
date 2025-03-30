@@ -2,11 +2,10 @@ package com.example.auth_impl.presentation
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.isVisible
+import com.example.auth_impl.R
+import com.example.auth_impl.databinding.FragmentAuthBinding
 import com.example.core.fragmentViewBinding
 import com.example.core.presentation.BaseFragment
-import com.example.settings_impl.R
-import com.example.settings_impl.databinding.FragmentAuthBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AuthFragment : BaseFragment<AuthState, AuthEvent>(R.layout.fragment_auth) {
@@ -23,9 +22,7 @@ class AuthFragment : BaseFragment<AuthState, AuthEvent>(R.layout.fragment_auth) 
         }
     }
 
-    override fun renderState(state: AuthState) {
-        binding.title.isVisible = !state.isLoading
-    }
+    override fun renderState(state: AuthState) = Unit
 
     override fun handleEvent(event: AuthEvent) = Unit
 }

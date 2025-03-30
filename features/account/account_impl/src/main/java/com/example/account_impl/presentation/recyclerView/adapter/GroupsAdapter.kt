@@ -1,11 +1,11 @@
 package com.example.account_impl.presentation.recyclerView.adapter
 
 import androidx.core.view.isGone
+import com.example.account_impl.databinding.ItemGroupBinding
 import com.example.account_impl.presentation.recyclerView.model.GroupViewItem
 import com.example.core.utils.AdapterUtil
 import com.example.core.utils.adapterDelegateViewBinding
 import com.example.core.utils.bindWithBinding
-import com.example.settings_impl.databinding.ItemGroupBinding
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 
 

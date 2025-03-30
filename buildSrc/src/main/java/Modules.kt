@@ -24,6 +24,7 @@ object Modules {
         val connection = FeatureTemplate("connection")
         val auth = FeatureTemplate("auth")
         val account = FeatureTemplate("account")
+        val group = FeatureTemplate("group")
     }
 
 }
