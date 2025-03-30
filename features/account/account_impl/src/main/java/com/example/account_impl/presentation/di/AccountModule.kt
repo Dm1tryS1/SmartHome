@@ -1,15 +1,14 @@
-package com.example.auth_impl.presentation.di
+package com.example.account_impl.presentation.di
 
 
-import com.example.auth_api.AuthFeature
-import com.example.auth_impl.AuthFeatureImpl
-import com.example.auth_impl.presentation.AuthViewModel
-import com.example.auth_impl.presentation.domain.AuthUseCase
+import com.example.account_impl.AccountFeatureImpl
+import com.example.account_impl.presentation.AccountViewModel
+import com.example.account_impl.presentation.domain.AccountUseCase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-object AuthModule {
+object AccountModule {
     operator fun invoke() = listOf(
         createFeatureModule(),
         createDataModule(),
@@ -18,19 +17,20 @@ object AuthModule {
     )
 
     private fun createFeatureModule() = module {
-        factory { AuthFeatureImpl() } bind AuthFeature::class
+        factory { AccountFeatureImpl() } bind AccountFeatureImpl::class
     }
 
 
     private fun createPresentationModule() = module {
-        viewModel { AuthViewModel(get(), get()) }
+        viewModel { AccountViewModel(get(), get(), get()) }
+
+        factory { AccountViewModel.Features(get(), get()) }
     }
 
     private fun createDomainModule() = module {
-        factory { AuthUseCase(get()) }
+        factory { AccountUseCase(get()) }
     }
 
     private fun createDataModule() = module {
     }
-
 }

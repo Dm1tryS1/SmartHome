@@ -20,7 +20,7 @@ fun View.showSnack(
 
     snackBar.view.apply {
         findViewById<TextView>(com.google.android.material.R.id.snackbar_text).apply {
-            setTextAppearance(R.style.text)
+            setTextAppearance(R.style.textButton)
             textAlignment = View.TEXT_ALIGNMENT_CENTER
         }
 

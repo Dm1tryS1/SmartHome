@@ -32,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
+        android:backgroundTint="@color/gray1"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
     <TextView
@@ -49,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
+        android:backgroundTint="@color/gray1"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/login" />
 
@@ -59,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/bg_menu_button"
-        android:text="Авторизроваться"
+        android:text="Авторизоваться"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/password" />
 
@@ -92,21 +94,5 @@
         android:textAllCaps="false"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/error" />
-
-
-    <TextView
-        android:id="@+id/close"
-        style="@style/Text.Gray"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="@string/temperature_button_back"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/registration" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

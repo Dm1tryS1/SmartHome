@@ -2,6 +2,7 @@ package com.example.smarthome.presentation.main
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.viewModelScope
+import com.example.account_impl.presentation.AccountFragment
 import com.example.core.presentation.BaseViewModel
 import com.example.home_impl.presentation.HomeFragment
 import com.example.settings_impl.presentation.SettingsFragment
@@ -42,7 +43,7 @@ class MainViewModel(router: Router): BaseViewModel<MainState, MainEvent>(router 
     fun buildFragment(type: TabType): Fragment {
         return when (type) {
             TabType.Home -> HomeFragment()
-            TabType.Settings -> SettingsFragment()
+            TabType.Account -> AccountFragment()
         }
     }
 

@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Smart Home</string>
+    <string name="app_name">Smart Office</string>
     <string name="main_double_click_exit">Для выхода из приложения нажмите кнопку \"Назад\" еще раз</string>
 </resources>

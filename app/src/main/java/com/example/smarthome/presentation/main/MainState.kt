@@ -9,18 +9,18 @@ data class MainState(
 
 enum class TabType {
     Home,
-    Settings,
+    Account,
 }
 
 object TabsMapper {
     fun mapItemIdToTab(item: MenuItem) = when (item.itemId) {
         R.id.home -> TabType.Home
-        R.id.settings -> TabType.Settings
+        R.id.account -> TabType.Account
         else -> null
     }
 
     fun mapTabToItemId(tab: TabType): Int = when (tab) {
         TabType.Home -> R.id.home
-        TabType.Settings -> R.id.settings
+        TabType.Account -> R.id.account
     }
 }
